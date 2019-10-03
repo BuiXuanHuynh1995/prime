@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var n = Number(prompt("nhập n"));
+    function checkN(n) {
+        var snt = true;
+        if (n < 1) {
+            return  false;
+        } else {
+            for (let i = 2; i< n; i++) {
+                if (n % i === 0) {
+                    return  false;
+                }
+            }
+            return true;
+        }
+        if (snt == true) {
+            document.write(n + " là snt" + "<br>")
+        } else {
+            document.write(n + " không là snt" + "<br>")
+        }
+    }
+
+    checkN(n);
+    function hienThi(n) {
+        for (let k = 2; k <= n; k++) {
+            if (checkN(k) == true) {
+                console.log(k)
+            }
+        }
+    }
+    hienThi(n);
+
+</script>
+</body>
+</html>
